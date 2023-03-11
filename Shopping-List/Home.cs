@@ -61,19 +61,39 @@ namespace Shopping_List
 
         private void button3_Click(object sender, EventArgs e)
         {
+            lists.Clear();
+            controllerLists.getLists(lists);
 
+            this.Controls.Add(new pnlCards(id, lists, this));
+            this.removepnl("pnlAddList");
+            this.removepnl("pnlMyLists");
+            this.removepnl("pnlUpdate");
+            this.button5.Visible = true;
+            this.button3.Visible = false;
+            this.button4.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            lists.Clear();
+            this.button4.Visible = false;
+            this.button3.Visible = true;
+            this.button5.Visible = true;
+            this.removepnl("pnlCards");
+            this.removepnl("pnlAddList");
+            controllerLists.getMyLists(lists, id);
+            this.Controls.Add(new pnlMyLists(id, lists, this));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             this.Controls.Add(new pnlAddList(id, this));
             this.removepnl("pnlCards");
+            this.removepnl("pnlMyLists");
             this.button5.Visible = false;
+            this.button3.Visible = true;
+            this.button4.Visible = true;
         }
     }
 }
