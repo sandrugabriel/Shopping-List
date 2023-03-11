@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shopping_List
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home(int id)
         {
             InitializeComponent();
         }
