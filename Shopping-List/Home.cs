@@ -35,7 +35,7 @@ namespace Shopping_List
             label2.Text = controllerClients.numeById(id);
 
             lists = new List<List>();
-            controllerLists.getRecipes(lists);
+            controllerLists.getLists(lists);
 
             this.Controls.Add(new pnlCards(id, lists, this));
             this.button3.Visible = false;
@@ -59,6 +59,21 @@ namespace Shopping_List
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(new pnlAddList(id, this));
+            this.removepnl("pnlCards");
+            this.button5.Visible = false;
+        }
     }
 }

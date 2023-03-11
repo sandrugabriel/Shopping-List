@@ -58,7 +58,7 @@ namespace Shopping_List.Controllers
             return -1;
         }
 
-        public void getRecipes(List<List> recipes1)
+        public void getLists(List<List> recipes1)
         {
 
             for (int i = 0; i < lists.Count; i++)
@@ -72,6 +72,97 @@ namespace Shopping_List.Controllers
         }
 
 
+        public List getListById(int id)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    return lists[i];
+                }
+            }
+
+            return null;
+        }
+
+        public int generareId()
+        {
+            Random random = new Random();
+
+            int id = random.Next();
+            while (this.getListById(id) != null)
+            {
+
+                id = random.Next();
+
+            }
+
+
+            return id;
+
+        }
+
+        public void save(string textul)
+        {
+
+            string text = textul;
+            string path = Application.StartupPath + @"/data/shoppingLists.txt";
+            File.AppendAllText(path, text + "\n");
+
+
+        }
+
+        public string nameById(int id)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    return (lists[i].getName());
+                }
+            }
+
+            return null;
+        }
+
+        public string listById(int id)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    return (lists[i].getList());
+                }
+            }
+
+            return null;
+        }
+
+        public string toSaveFisier()
+        {
+
+            string t = "";
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                t += lists[i].toSave() + "\n";
+            }
+
+            return t;
+        }
+
+        public void save()
+        {
+            String path = Application.StartupPath + @"/data/shoppingLists.txt";
+            StreamWriter streamWriter = new StreamWriter(path);
+
+            streamWriter.Write(this.toSaveFisier());
+
+            streamWriter.Close();
+        }
 
 
 

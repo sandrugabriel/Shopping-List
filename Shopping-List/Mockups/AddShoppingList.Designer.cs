@@ -122,7 +122,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(517, 130);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(578, 398);
+            this.richTextBox1.Size = new System.Drawing.Size(578, 269);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -133,6 +133,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(271, 51);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -148,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 79);
+            this.label1.Location = new System.Drawing.Point(102, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 48);
             this.label1.TabIndex = 0;
