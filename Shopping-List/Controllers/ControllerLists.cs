@@ -73,14 +73,31 @@ namespace Shopping_List.Controllers
             return -1;
         }
 
-        public void getLists(List<List> recipes1)
+        public void getLists(List<List> list1)
         {
 
             for (int i = 0; i < lists.Count; i++)
             {
 
                 List a = lists[i];
-                recipes1.Add(a);
+                list1.Add(a);
+            }
+
+
+        }
+
+        public void getMyLists(List<List> list1, int idClient)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getIdClient() == idClient)
+                {
+
+                    List a = lists[i];
+                    list1.Add(a);
+                }
+
             }
 
 

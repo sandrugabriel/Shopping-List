@@ -1,6 +1,6 @@
 ﻿namespace Shopping_List.Mockups
 {
-    partial class Home
+    partial class MockupHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Location = new System.Drawing.Point(3, 96);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1265, 566);
-            this.panel4.TabIndex = 5;
             // 
             // panel3
             // 
@@ -85,6 +77,14 @@
             this.button3.Text = "Home";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel4.Location = new System.Drawing.Point(3, 96);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1265, 566);
+            this.panel4.TabIndex = 5;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,11 +100,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
