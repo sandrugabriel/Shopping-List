@@ -42,6 +42,36 @@ namespace Shopping_List.Controllers
 
 
 
+        public int idByNume(string nume)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+
+                if (lists[i].getName().Equals(nume))
+                {
+                    return lists[i].getId();
+                }
+
+            }
+
+            return -1;
+        }
+
+        public void getRecipes(List<List> recipes1)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+
+                List a = lists[i];
+                recipes1.Add(a);
+            }
+
+
+        }
+
+
 
 
 
