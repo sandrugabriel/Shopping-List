@@ -40,7 +40,22 @@ namespace Shopping_List.Controllers
             streamReader.Close();
         }
 
+        public void getMyLists(List<List> list1, int idClient)
+        {
 
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getIdClient() == idClient)
+                {
+
+                    List a = lists[i];
+                    list1.Add(a);
+                }
+
+            }
+
+
+        }
 
         public int idByNume(string nume)
         {
@@ -87,6 +102,7 @@ namespace Shopping_List.Controllers
 
 
         }
+
 
 
         public List getListById(int id)
@@ -183,7 +199,69 @@ namespace Shopping_List.Controllers
 
 
 
+        public void setNume(int id, string nume)
+        {
 
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    lists[i].setName(nume);
+                }
+            }
+
+
+        }
+
+
+        public void setList(int id, string list)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    lists[i].setList(list);
+                }
+            }
+
+
+        }
+
+
+        public int pozID(int id)
+        {
+
+            for (int i = 0; i < lists.Count; i++)
+            {
+                if (lists[i].getId() == id)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        public void stergere(int id)
+        {
+            int p = pozID(id);
+            if (p == pozID(id))
+                lists.RemoveAt(p);
+
+        }
+
+        public void deleteList(int id)
+        {
+            this.stergere(id);
+
+            string path = Application.StartupPath + @"/data/shoppingLists.txt";
+            StreamWriter stream = new StreamWriter(path);
+
+            stream.Write(this.toSaveFisier());
+
+            stream.Close();
+        }
 
 
 

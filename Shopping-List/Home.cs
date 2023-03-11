@@ -67,6 +67,7 @@ namespace Shopping_List
             this.Controls.Add(new pnlCards(id, lists, this));
             this.removepnl("pnlAddList");
             this.removepnl("pnlMyLists");
+            this.removepnl("pnlUpdate");
             this.button5.Visible = true;
             this.button3.Visible = false;
             this.button4.Visible = true;
@@ -86,6 +87,7 @@ namespace Shopping_List
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             this.Controls.Add(new pnlAddList(id, this));
             this.removepnl("pnlCards");
             this.removepnl("pnlMyLists");

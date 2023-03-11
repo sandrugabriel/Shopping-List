@@ -66,7 +66,14 @@ namespace Shopping_List.Panel_uri
                 pnlCard pnlcard = new pnlCard(list, form);
                 pnlcard.Location = new System.Drawing.Point(x, y);
                 this.Controls.Add(pnlcard);
-               
+                pnlcard.Click += new EventHandler(pnlcard_Click);
+                void pnlcard_Click(object sender, EventArgs e)
+                {
+                    string title = pnlcard.lblTitle1.Text;
+                    int id = controllerLists.idByNume(title);
+                    this.form.removepnl("pnlMyLists");
+                    this.form.Controls.Add(new pnlUpdate(idClient, id, form));
+                }
                 x += 450;
 
                 if (ct % nrCollums == 0)
