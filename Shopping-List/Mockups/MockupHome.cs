@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shopping_List.Mockups
 {
-    public partial class Home : Form
+    public partial class MockupHome : Form
     {
-        public Home()
+        public MockupHome()
         {
             InitializeComponent();
         }
