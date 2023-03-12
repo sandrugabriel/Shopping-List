@@ -20,7 +20,7 @@ namespace Shopping_List.Panel_uri
         List list;
         Home form;
 
-        RichTextBox shopping;
+        Label shopping;
 
         private int id;
 
@@ -55,14 +55,14 @@ namespace Shopping_List.Panel_uri
             this.lblTitle1.Text = list.getName();
 
             //List
-            shopping = new RichTextBox();
+            shopping = new Label();
             this.Controls.Add(shopping);
 
             this.shopping.Location = new System.Drawing.Point(25, 154);
             this.shopping.Size = new System.Drawing.Size(341, 100);
             this.shopping.Font = font;
             this.shopping.Text = list.getList();
-            this.shopping.ReadOnly = true;
+           
 
 
             id = list1.getId();
