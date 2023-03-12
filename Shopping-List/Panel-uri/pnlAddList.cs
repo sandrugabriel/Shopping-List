@@ -37,9 +37,10 @@ namespace Shopping_List.Panel_uri
             idClient = idClient1;
             erori = new List<string>();
             this.Name = "pnlAddList";
-            this.Size = new System.Drawing.Size(950, 507);
+            this.Size = new System.Drawing.Size(1550, 800);
             this.Location = new System.Drawing.Point(6, 82);
             this.BackColor = System.Drawing.Color.MistyRose;
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             Font font = new Font("Microsoft YaHei UI Light", 20);
             Font font1 = new Font("Microsoft YaHei UI Light", 14);

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNume = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,8 +39,10 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lblNume);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
@@ -50,15 +52,16 @@
             this.panel3.Size = new System.Drawing.Size(1265, 88);
             this.panel3.TabIndex = 6;
             // 
-            // label2
+            // lblNume
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(580, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 30);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.lblNume.AutoSize = true;
+            this.lblNume.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNume.Location = new System.Drawing.Point(580, 28);
+            this.lblNume.Name = "lblNume";
+            this.lblNume.Size = new System.Drawing.Size(75, 30);
+            this.lblNume.TabIndex = 6;
+            this.lblNume.Text = "label2";
+            this.lblNume.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -72,6 +75,7 @@
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(1072, 14);
             this.button5.Name = "button5";
@@ -83,6 +87,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(910, 14);
             this.button4.Name = "button4";
@@ -101,7 +106,6 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Home";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Home
@@ -113,6 +117,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "Home";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -121,11 +126,11 @@
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblNume;
     }
 }
 
