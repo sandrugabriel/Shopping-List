@@ -24,15 +24,17 @@ namespace Shopping_List
 
         public Home(int id1)
         {
-            InitializeComponent();
+         
             InitializeComponent();
             id = id1;
             controllerClients = new ControllerClients();
             controllerLists = new ControllerLists();
             controllerClients.load();
-            string name = controllerClients.numeById(id);
 
-            label2.Text = controllerClients.numeById(id);
+            string name = controllerClients.numeById(id);
+           MessageBox.Show(name);
+
+            this.lblNume.Text = name;
 
             lists = new List<List>();
             controllerLists.getLists(lists);
@@ -94,6 +96,11 @@ namespace Shopping_List
             this.button5.Visible = false;
             this.button3.Visible = true;
             this.button4.Visible = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

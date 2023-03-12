@@ -30,13 +30,14 @@ namespace Shopping_List.Panel_uri
 
             this.Name = "pnlMyLists";
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.Size = new System.Drawing.Size(1265, 566);
+            this.Size = new System.Drawing.Size(1550, 800);
             this.Location = new System.Drawing.Point(5, 82);
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
 
             lists = lists;
             controllerLists.getMyLists(lists, idClient);
-            createCard(2);
+           
 
 
             //Info
@@ -50,9 +51,29 @@ namespace Shopping_List.Panel_uri
 
             this.form = form1;
 
+            this.form.Resize += new EventHandler(form_Resize);
+
+            createCard(3);
+
             controllerLists.load();
 
         }
+
+        private void form_Resize(object sender, EventArgs e)
+        {
+
+            if(form.Width >= 1500)
+            {
+                createCard(2);
+            }
+            else if(form.Width <=1400)
+            {
+                createCard(3);
+            }
+
+            this.form.WindowState = FormWindowState.Maximized;
+        }
+
         public void createCard(int nrCollums)
         {
 

@@ -86,25 +86,6 @@ namespace Shopping_List.Controllers
 
         }
 
-        public void getMyLists(List<List> list1, int idClient)
-        {
-
-            for (int i = 0; i < lists.Count; i++)
-            {
-                if (lists[i].getIdClient() == idClient)
-                {
-
-                    List a = lists[i];
-                    list1.Add(a);
-                }
-
-            }
-
-
-        }
-
-
-
         public List getListById(int id)
         {
 

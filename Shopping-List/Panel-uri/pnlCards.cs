@@ -28,17 +28,37 @@ namespace Shopping_List.Panel_uri
 
             this.Name = "pnlCards";
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.Size = new System.Drawing.Size(1265, 566);
+            this.Size = new System.Drawing.Size(1550,800);
             this.Location = new System.Drawing.Point(5, 82);
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
+            this.form = form1;
             lists = lists1;
+
+            this.form.Resize += new EventHandler(form_Resize);
 
             createCard(2);
 
-            this.form = form1;
 
 
         }
+
+        private void form_Resize(object sender, EventArgs e)
+        {
+            
+            if(form.Width >= 1500)
+            {
+                createCard(3);
+            }
+            else
+            {
+
+                createCard(2);
+            }
+
+            this.form.WindowState = FormWindowState.Maximized;
+        }
+
         public void createCard(int nrCollums)
         {
 
