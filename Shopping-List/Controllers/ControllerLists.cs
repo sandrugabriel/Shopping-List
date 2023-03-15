@@ -246,6 +246,33 @@ namespace Shopping_List.Controllers
 
 
 
+        public void getListFilter(List<List> lists1, string cuvantul, int dim)
+        {
+
+            for(int i=0;i<lists.Count; i++)
+            {
+
+                string textul = lists[i].getList();
+                int dimensiunea = textul.Length;
+                for(int k = 0; k < dimensiunea - dim + 1; k++)
+                {
+
+                    string cuv = textul.Substring(k,dim);
+
+                    if(cuvantul == cuv)
+                    {
+                        List list = lists[i];
+                        lists1.Add(list);
+                    }
+                }
+
+
+            }
+
+
+        }
+
+
 
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shopping_List.Controllers;
+using Shopping_List.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace Shopping_List
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home(1));
+
         }
     }
 }
