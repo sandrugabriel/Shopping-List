@@ -114,7 +114,7 @@ namespace Shopping_List.Panel_uri
             controllerList.deleteList(id);
             this.form.removepnl("pnlUpdate");
             controllerList.getLists(list);
-            this.form.Controls.Add(new pnlCards(idClient, list, form));
+            this.form.Controls.Add(new pnlCards(list, form));
 
 
         }
@@ -130,7 +130,7 @@ namespace Shopping_List.Panel_uri
             this.form.button5.Visible = true;
 
             this.form.removepnl("pnlUpdate");
-            this.form.Controls.Add(new pnlCards(idClient, list, form));
+            this.form.Controls.Add(new pnlCards(list, form));
             this.form.button4.Visible = true;
 
 

@@ -21,17 +21,17 @@ namespace Shopping_List.Panel_uri
 
         private int idClient;
 
-        public pnlCards(int idClient1, List<List> lists1, Home form1)
+        public pnlCards(List<List> lists1, Home form1)
         {
-            idClient = idClient1;
             controllerLists = new ControllerLists();
 
             this.Name = "pnlCards";
             this.BackColor = System.Drawing.Color.DarkGray;
             this.Size = new System.Drawing.Size(1550,800);
-            this.Location = new System.Drawing.Point(5, 82);
+            this.Location = new System.Drawing.Point(230, 82);
             this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
+            this.AutoScroll = true;
+    
             this.form = form1;
             lists = lists1;
 

@@ -32,14 +32,14 @@ namespace Shopping_List
             controllerClients.load();
 
             string name = controllerClients.numeById(id);
-           MessageBox.Show(name);
 
             this.lblNume.Text = name;
 
             lists = new List<List>();
             controllerLists.getLists(lists);
 
-            this.Controls.Add(new pnlCards(id, lists, this));
+            this.Controls.Add(new pnlFilters(this,lists));
+            this.Controls.Add(new pnlCards(lists, this));
             this.button3.Visible = false;
         }
 
@@ -66,7 +66,8 @@ namespace Shopping_List
             lists.Clear();
             controllerLists.getLists(lists);
 
-            this.Controls.Add(new pnlCards(id, lists, this));
+            this.Controls.Add(new pnlCards(lists, this));
+            this.Controls.Add(new pnlFilters(this,lists ));
             this.removepnl("pnlAddList");
             this.removepnl("pnlMyLists");
             this.removepnl("pnlUpdate");
@@ -83,6 +84,7 @@ namespace Shopping_List
             this.button5.Visible = true;
             this.removepnl("pnlCards");
             this.removepnl("pnlAddList");
+            this.removepnl("pnlFilters");
             controllerLists.getMyLists(lists, id);
             this.Controls.Add(new pnlMyLists(id, lists, this));
         }
@@ -92,6 +94,7 @@ namespace Shopping_List
 
             this.Controls.Add(new pnlAddList(id, this));
             this.removepnl("pnlCards");
+            this.removepnl("pnlFilters");
             this.removepnl("pnlMyLists");
             this.button5.Visible = false;
             this.button3.Visible = true;

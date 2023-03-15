@@ -132,7 +132,7 @@ namespace Shopping_List.Panel_uri
                 controllerList.load();
                 List<List> lists = new List<List>();
                 controllerList.getLists(lists);
-                this.form.Controls.Add(new pnlCards(idClient, lists, form));
+                this.form.Controls.Add(new pnlCards(lists, form));
                 this.form.removepnl("pnlAddList");
 
             }
